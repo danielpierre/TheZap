@@ -1,0 +1,119 @@
+.works {
+	padding-top: 90px;
+	text-align: center;
+
+	a {
+		display: block;
+		padding: 14px 20px;
+		border: 1px solid #141414;
+		font-family: 'Montserrat', sans-serif;
+		color: #141414;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.2s;
+
+		&:hover {
+			border: 1px solid #EFB013;
+			background-color: #EFB013;
+			color: #fff;
+		}
+	}
+}
+
+.btn-group,
+.gallery {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+}
+
+.btn-group-container {
+	display: inline-block;
+}
+
+
+.btn-group {
+	margin: 0 auto 40px;
+	justify-content: space-between;
+	font-size: 10px;
+
+	li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+
+.gallery {
+	flex-wrap: wrap;
+	font-size: 0;
+}
+
+.gallery li {
+	width: 25%;
+
+	img {
+		max-width: 100%;
+		transition: opacity 0.2s;
+	}
+
+	&:hover {
+		background: #141414;
+
+		img {
+			opacity: 0.8;
+		}
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.gallery li {
+		width: 33.333%;
+
+		&:nth-child(n+7) {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.btn-group {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.gallery li {
+		width: 50%;
+
+		&:nth-child(n+5) {
+			display: none;
+		}
+	}
+}
+
+// @media screen and (max-width: 642px) {
+// 	.btn-group li:last-child {
+// 		margin-top: 20px;
+// 	}
+// }
+
+@media screen and (max-width: 574px) {
+	.btn-group li:nth-child(n+5) {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.btn-group li:nth-child(n+4) {
+		margin-top: 20px;
+	}
+
+	.gallery li {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 449px) {
+	.btn-group li:nth-child(n+3) {
+		margin-top: 20px;
+	}
+}

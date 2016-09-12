@@ -1,0 +1,79 @@
+.clients {
+	padding: 90px 0 85px;
+	text-align: center;
+}
+
+.clients-block {
+	width: 63%;
+	display: inline-block;
+
+	.client-image-group {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 38px;
+
+		div {
+			display: flex;
+			justify-content: center;
+		}
+
+		img {
+			display: block;
+		}
+	}
+
+	.quote {
+		margin-bottom: 34px;
+		font: italic 18px/1.7 $accentFont;
+	}
+
+	.client-name {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-size: 14px;
+		color: $boldText;
+	}
+
+	.tagline {
+		margin-bottom: 15px;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	.slider-control {
+		background-image: url(../icons/dots.png);
+		height: 23px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.clients-block {
+		width: 80%;
+
+		.client-image-group {
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			div:nth-child(2) {
+				order: -1;
+				flex-basis: 100%;
+			}
+			
+			div:not(:nth-child(2)) {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.clients-block .client-image-group {
+		div {
+			flex-basis: 100%;
+		}
+	}
+}

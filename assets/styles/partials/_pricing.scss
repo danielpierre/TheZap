@@ -1,0 +1,148 @@
+.pricing {
+	padding: 90px 0 0;
+
+	h3 {
+		text-align: center;
+
+		span {
+			padding: 0 5px;
+			color: $normalText;
+			font: italic 15px $accentFont;
+			text-transform: none;
+		}
+	}
+}
+
+.plan-group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 80px;
+}
+
+.plan-block {
+	width: 23%;
+	border: 1px solid #ECECEC;
+	background-color: #fff;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	transition: transform 0.2s;
+
+	h4 {
+		border-bottom: 1px solid #ECECEC;
+		color: $boldText;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 26px 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	li {
+		font-size: 13px;
+		letter-spacing: 0.9px;
+		margin: 32px 0;
+	}
+
+	.price {
+		padding: 22px 0 70px;
+		font-size: 50px;
+		color: $boldText;
+
+		span:first-child {
+			vertical-align: super;
+			font-size: 18px;
+			position: relative;
+			top: -10px;
+		}
+
+		span:last-child {
+			font: italic 15px $accentFont;
+			letter-spacing: 1px;
+		}
+	}
+
+	.btn {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: none;
+
+		a {
+			background-color: $boldText;
+			padding: 11px 44px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #fff;
+			letter-spacing: 1.2px;
+			white-space: nowrap;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: #EFB013;
+			}
+		}
+	}
+
+	&:hover {
+		transform: translateY(-22px);
+		box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.1);
+
+		.btn {
+			display: block;
+		}
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.plan-group {
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.plan-block {
+		width: 34%;
+
+		&:nth-child(-n+2) {
+			margin-bottom: 50px;
+		}
+
+		.btn {
+			a {
+				padding: 11px 44px;
+				font-size: 12px;
+				letter-spacing: 1.2px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.plan-block {
+		width: 40%;
+
+		.btn {
+			a {
+				padding: 9px 36px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.plan-block {
+		width: 45%;
+
+		.btn {
+			a {
+				padding: 9px 24px;
+			}
+		}
+	}
+}

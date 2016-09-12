@@ -1,0 +1,180 @@
+.team {
+	padding-top: 90px;
+
+	h3 {
+		margin-bottom: 0;
+		font-size: 24px;
+	}
+}
+
+.team-group {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 52px;
+
+	div {
+		width: calc(33.333% - 20px);
+		display: flex;
+		justify-content: center;
+	}
+
+	figure {
+		// width: calc(33.333% - 20px);
+		position: relative;
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	figcaption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		border-top: 2px solid rgba(255, 255, 255, 0.5);
+		background-color: rgba(0, 0, 0, 0.25);
+		color: #fff;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1.1px;
+
+		span {
+			margin-top: 6px;
+			display: block;
+			font: italic 13px $accentFont;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+.team-description {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 20px;
+
+	p {
+		width: 65%;
+		margin: 0;
+		font-size: 15px;
+		line-height: 2;
+	}
+
+	.btn {
+		display: inline-block;
+
+		a {
+			padding: 25px 48px;
+		}
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.team-group {
+		figcaption {
+			padding: 10px;
+			letter-spacing: 0.8px;
+			white-space: nowrap;
+
+			span {
+				letter-spacing: 0.5px;
+			}
+		}
+	}
+
+	.team-description {
+		.btn {
+			a {
+				letter-spacing: 3px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.team-group {
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		div:first-child {
+			width: 100%;
+
+			figure {
+				width: calc(50% - 20px);
+			}
+		}
+
+		div:not(:first-child) {
+			width: calc(50% - 20px);
+		}
+
+		figure {
+			// width: calc(50% - 20px);
+
+			&:last-child {
+				margin-top: 20px;
+			}
+		}
+
+		figcaption {
+			font-size: 13px;
+
+			span {
+				font: italic 12px $accentFont;
+				letter-spacing: 0.3px;
+			}
+		}
+	}
+
+	.team h3, 
+	.team-description {
+		text-align: center;
+	}
+
+	.team-description {
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			width: 100%;
+			margin: 30px 0 40px;
+		}
+
+		.btn {
+			align-self: center;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.team-group {
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+
+		div {
+			width: 66.667%;
+
+			&:first-child,
+			&:not(:first-child) {
+				width: 66.667%;
+			}
+
+			&:first-child {
+				figure {
+					width: 100%;
+				}
+			}
+		}
+
+		figure {
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+		}
+	}
+}

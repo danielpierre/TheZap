@@ -1,0 +1,60 @@
+.partners {
+	padding: 90px 0 100px;
+	text-align: center;
+
+	.btn {
+		a {
+			padding: 25px 30px;
+		}
+	}
+}
+
+.logo-group {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+	a {
+		display: flex;
+		opacity: 0.75;
+		transition: opacity 0.2s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		margin: auto;
+	}
+}
+
+.logo-group-four {
+	margin-bottom: 30px;
+	div {
+		width: 23%;
+	}	
+}
+
+.logo-group-three {
+	width: 75%;
+	margin: 0 auto 45px;
+	div {
+		width: 30.6%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.partners .btn a {
+		letter-spacing: 3px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.partners .btn a {
+		padding: 15px 18px;
+		letter-spacing: 1.5px;
+	}
+}

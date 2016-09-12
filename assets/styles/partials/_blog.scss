@@ -1,0 +1,149 @@
+.blog {
+	padding: 90px 0 0;
+}
+
+.blog-group {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: baseline;
+}
+
+.blog-image {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		content: url(../icons/grey-triangle.svg);
+	}
+}
+
+.blog-image-left:after {
+	right: 0;
+	transform: rotate(90deg) translateY(-50%);
+}
+
+.blog-image-right:after {
+	left: 0;
+	transform: rotate(-90deg) translateY(-50%);
+}
+
+.blog-text {
+	max-width: 50%;
+	width: 50%;
+	background-color: $blogBg;
+	display: flex;
+
+	div {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+.blog-block {
+	font-size: 0;
+	width: 50%;
+	display: flex;
+
+	img {
+		max-width: 100%;
+		display: block;
+	}	
+
+	h3 {
+		font-size: 24px;
+		font-weight: normal;
+		text-transform: none;
+		margin: 10px 0;
+		white-space: nowrap;
+	}
+
+	p {
+		margin-top: 10px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 2.2;
+	}
+
+	a {
+		font-size: 14px;
+		color: $boldText;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1.1px;
+		position: relative;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.tagline {
+		font-size: 13px;
+		color: $boldText;
+		margin: 0;
+	}
+}
+
+/* Large screens */
+@media all and (max-width: 1618px) {
+	.blog-group {
+		flex-direction: column;
+	}
+
+	.blog-block,
+	.blog-text,
+	.blog-image,
+	.blog-image img {
+		width: 100%;
+	}
+
+	.blog-block:nth-child(1) {
+		order: 1;
+	}
+
+	.blog-block:nth-child(2) {
+		order: 3;
+	}
+
+	.blog-block:nth-child(3) {
+		order: 2;
+	}
+
+	.blog-block:nth-child(4) {
+		order: 4;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.blog-block:last-child {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.blog-block {
+		flex-direction: column;
+		background-color: $blogBg;
+	}
+
+	.blog-block:nth-child(3) {
+		display: none;
+	}
+
+	.blog-image-left:after,
+	.blog-image-right:after {
+		top: 100%;
+		bottom: 0;
+		right: 88%;
+		transform: rotate(180deg);
+	}
+
+	.blog-text {
+		max-width: 100%;
+		background-color: $blogBg;
+		display: flex;
+		padding: 60px 0;
+	}
+}

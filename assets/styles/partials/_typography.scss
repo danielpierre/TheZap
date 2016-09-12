@@ -1,0 +1,15 @@
+body {
+	color: $normalText;
+	font-family: $mainFont;
+}
+
+h2, h3 {
+	// font-family: $mainFont;
+	color: $boldText;
+	text-transform: uppercase;
+}
+
+.tagline {
+	font: italic 18px $accentFont;
+}
+
